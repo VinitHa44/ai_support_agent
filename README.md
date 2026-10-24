@@ -67,7 +67,7 @@ flowchart TD
 
 ### 5. Interactive Live Web UI
 - Served directly at `http://localhost:8000/`.
-- Sleek dark console featuring preset prompts, conversation switcher, live JSON contract inspector, and webhook failure toggle.
+- Sleek dark console featuring preset prompts, conversation switcher, and live JSON contract inspector.
 - **Chat Management:** `＋ New Chat` button to spawn clean sessions and `🗑` button to wipe all conversation history.
 
 ---
@@ -165,7 +165,6 @@ Content-Type: application/json
 - `GET /api/accounts`: Lists all accounts and diagnoses in SQLite.
 - `GET /api/conversations`: Returns recent conversation threads with message count and preview.
 - `DELETE /api/conversations`: Wipes all conversation messages and tickets from the database.
-- `POST /api/simulate-webhook-failure`: Toggles fault tolerance mode for Discord webhook simulation.
 
 ---
 
@@ -206,37 +205,3 @@ ai_support_agent/
 ├── .gitignore
 └── README.md
 ```
-
----
-
-## ⚠️ Known Limitations & What Broke
-
-### 1. Conversational Escalation Without Tool Invocation (Turn 4)
-**What broke:** When an issue remained unresolved after troubleshooting, the LLM generated natural-language text (*"Since the issue is unresolved, I will escalate to human support. Creating a ticket now..."*) without emitting the formal `escalate_to_human` tool call. As a result, `outcome` defaulted to `"answered"`, no ticket was created in SQLite or sent to Discord, and unrelated documentation links were backfilled.
-
-**Fix applied:** Added a deterministic safety interceptor in `src/llm.py` that catches conversational escalation intent. When detected, the interceptor automatically executes `execute_escalate_to_human`, sets `outcome = "escalated"`, assigns a canonical ticket ID, and suppresses doc links.
-
-### 2. Multi-Turn Email Priority Inversion
-**What broke:** When a user tested `rahul@example.com` and subsequently tested `priya@example.com` in the same chat, Priya was incorrectly diagnosed as offline with a missing API key.
-
-**Root cause:** The email lookup helper searched `conversation_history` before `user_message`. Because Rahul's email was already present in history, it overrode Priya's email.
-
-**Fix applied:** Updated `_find_user_email()` to strictly prioritize the current `user_message`. If the user provides a new email, it immediately takes precedence over historical emails.
-
-### 3. Redundant Email Prompts Across Multiple Turns
-**What broke:** After diagnosing an account, if the user reiterated *"my agent is broken"* several turns later, the LLM treated it as a fresh query and asked for their email address again.
-
-**Fix applied:** Injected `ACTIVE CONVERSATION MEMORY` into the system prompt with the user's active email, and added an interceptor that reroutes redundant `ask_clarification` calls directly to `get_agent_status(known_email)`.
-
-### 4. Ticket ID Discrepancy Between Discord and Database
-**What broke:** The original escalation handler in `tools.py` generated a temporary ID (`tick-{conv_id[-6:]}`) for Discord while `create_ticket()` generated an internal UUID. Human engineers seeing the Discord alert could not locate the matching ticket in the database.
-
-**Fix applied:** A canonical ticket ID (`tick-{uuid[:8]}`) is now generated *before* dispatch and shared between both Discord and SQLite records.
-
----
-
-## 🔐 Security Notes
-
-- **`.env` is strictly excluded in `.gitignore`** and will never be committed.
-- All PII (emails, API keys, passwords, phone numbers) is stripped from ticket summaries and Discord notifications via `src/pii.py`.
-- Prompt-injection attempts (e.g. instruction resets, DAN jailbreaks, system prompt leak attempts) are refused safely in both LLM mode and fallback mode.

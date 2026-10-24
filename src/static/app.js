@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatMessages      = document.getElementById("chat-messages");
   const btnClearChat      = document.getElementById("btn-clear-chat");
   const outcomeBadge      = document.getElementById("current-outcome-badge");
-  const toggleFailure     = document.getElementById("toggle-failure");
   const convHistoryList   = document.getElementById("conv-history-list");
 
   // Inspector Elements
@@ -191,20 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // ─── Event: Toggle Webhook Failure ────────────────────────────────────────
-
-  toggleFailure.addEventListener("change", async (e) => {
-    try {
-      await fetch("/api/simulate-webhook-failure", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ simulate_failure: e.target.checked }),
-      });
-    } catch (err) {
-      console.error("Failed to set failure simulation:", err);
-    }
-  });
 
   // ─── Event: Preset Buttons ────────────────────────────────────────────────
 

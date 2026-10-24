@@ -21,7 +21,6 @@ from src.database import get_connection, init_db
 from src.webhook import (
     clear_mock_webhook_log,
     get_mock_webhook_log,
-    set_simulate_webhook_failure,
 )
 
 logger = logging.getLogger(__name__)
@@ -57,9 +56,6 @@ class ChatResponse(BaseModel):
     outcome: str = Field(..., description="Allowed: answered, needs_clarification, escalated, escalation_pending")
     ticket_id: Optional[str] = Field(default=None, description="Support ticket ID if an issue was escalated")
 
-
-class SimulateFailureRequest(BaseModel):
-    simulate_failure: bool
 
 
 # ---------------- Startup Event ---------------- #
@@ -243,12 +239,6 @@ def get_history(conversation_id: str):
     conn.close()
     return {"conversation_id": conversation_id, "messages": [dict(r) for r in rows]}
 
-
-@app.post("/api/simulate-webhook-failure")
-def simulate_webhook_failure(req: SimulateFailureRequest):
-    """Endpoint for testing fault tolerance: forces Discord webhook failures."""
-    set_simulate_webhook_failure(req.simulate_failure)
-    return {"simulate_failure": req.simulate_failure}
 
 
 # Mount static directory for frontend
