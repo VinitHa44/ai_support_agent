@@ -1,0 +1,811 @@
+[
+  {
+    "path": "/docs",
+    "url": "https://docs.ampere.sh/docs",
+    "title": "Introduction",
+    "description": "What Ampere is and when to use it",
+    "content": "IntroductionWhat Ampere is and when to use itAmpere is managed hosting for OpenClaw. OpenClaw is the open-source assistant runtime. It connects chat apps, tools, files, sessions, and automations to one AI assistant you control. Ampere runs that OpenClaw environment for you, so you do not need to manage servers, updates, uptime, or setup. 🦞OpenClawThe open-source assistant engine.AmpereThe hosted product that runs OpenClaw for you. Why use Ampere? Use Ampere when you want an assistant that stays available, works from your channels, and can grow with your workflows. Ampere helps with: hosted OpenClaw setup dashboard chat and saved sessions Telegram, Discord, WhatsApp, and other channel setup skills and scheduled jobs workspace files and terminal access billing, credits, updates, and support The short version: OpenClaw is the assistant. Ampere runs it. Who it is for Ampere is useful for: founders who want a long-running business assistant operators who want reminders, reports, and routine work handled developers who want files, terminal access, and tools teams that want a shared assistant setup people who want OpenClaw without maintaining a VPS If you only need a one-time chatbot, Ampere may be more than you need. Start here Create your botPick a name and plan, then let Ampere start your hosted OpenClaw environment.Test in the dashboardUse dashboard chat first. Make sure the assistant behaves the way you want.Connect channelsAdd Telegram, Discord, WhatsApp, or another channel when you are ready.Add skills and jobsInstall skills and create scheduled jobs after the basics work. Main docs Getting StartedCreate your bot and reach the dashboard.Credits & PricingUnderstand plans, credits, BYOK, and teams.ChannelsConnect Telegram, Discord, WhatsApp, and more.Scheduled JobsRun reminders and recurring assistant work.Getting StartedStart using Ampere well after your OpenClaw bot is ready",
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "What Ampere is and when to use it Ampere is managed hosting for OpenClaw . OpenClaw is the open-source assistant runtime. It connects chat apps, tools, files, sessions, and automations to one AI assistant you control. Ampere runs that OpenClaw environment for you, so you do not need to manage servers, updates, uptime, or setup."
+      },
+      {
+        "heading": "OpenClaw",
+        "content": "The open-source assistant engine."
+      },
+      {
+        "heading": "Ampere",
+        "content": "The hosted product that runs OpenClaw for you."
+      },
+      {
+        "heading": "Why use Ampere?",
+        "content": "Use Ampere when you want an assistant that stays available, works from your channels, and can grow with your workflows. Ampere helps with: hosted OpenClaw setup dashboard chat and saved sessions Telegram, Discord, WhatsApp, and other channel setup skills and scheduled jobs workspace files and terminal access billing, credits, updates, and support The short version: OpenClaw is the assistant. Ampere runs it."
+      },
+      {
+        "heading": "Who it is for",
+        "content": "Ampere is useful for: founders who want a long-running business assistant operators who want reminders, reports, and routine work handled developers who want files, terminal access, and tools teams that want a shared assistant setup people who want OpenClaw without maintaining a VPS If you only need a one-time chatbot, Ampere may be more than you need."
+      },
+      {
+        "heading": "Create your bot",
+        "content": "Pick a name and plan, then let Ampere start your hosted OpenClaw environment."
+      },
+      {
+        "heading": "Test in the dashboard",
+        "content": "Use dashboard chat first. Make sure the assistant behaves the way you want."
+      },
+      {
+        "heading": "Connect channels",
+        "content": "Add Telegram, Discord, WhatsApp, or another channel when you are ready."
+      },
+      {
+        "heading": "Add skills and jobs",
+        "content": "Install skills and create scheduled jobs after the basics work."
+      },
+      {
+        "heading": "Getting Started",
+        "content": "Create your bot and reach the dashboard."
+      },
+      {
+        "heading": "Credits & Pricing",
+        "content": "Understand plans, credits, BYOK, and teams."
+      },
+      {
+        "heading": "Channels",
+        "content": "Connect Telegram, Discord, WhatsApp, and more."
+      },
+      {
+        "heading": "Scheduled Jobs",
+        "content": "Run reminders and recurring assistant work. Getting Started Start using Ampere well after your OpenClaw bot is ready"
+      }
+    ]
+  },
+  {
+    "path": "/docs/advanced/media-generation",
+    "url": "https://docs.ampere.sh/docs/advanced/media-generation",
+    "title": "Media Generation",
+    "description": "Choose image generation and image edit defaults",
+    "content": "AdvancedMedia GenerationChoose image generation and image edit defaultsMedia Generation settings control which visual models Ampere uses for image work. Ampere separates two defaults: Image Generation — create a new image from a prompt Image Edit — edit or improve an existing image This lets you use one model for first drafts and another for refinements. When to change these settings Change media settings if you: create images often want more control over cost and quality want different defaults for creating and editing do repeated visual work and do not want to choose a model each time If you rarely create images, the defaults are fine. How to use it Open Media Generation settingsGo to the dashboard settings area.Pick an Image Generation modelChoose the default model for new images.Pick an Image Edit modelChoose the default model for refinements.Save your choicesAmpere uses these defaults for future image tasks. Current media models The current product UI includes: GPT Image 1.5 (gpt-image-1.5) Seedream 4.5 (seedream-4.5) Nano Banana Pro (nano-banana-pro) Nano Banana 2 (nano-banana-2) Flux 2 Flex (flux-2-flex) Standard vs HD Each model shows a Standard and HD credit cost. ⚡StandardLower cost. Best for drafts, prompt testing, and quick variations.💎HDHigher cost. Best for final images and polished outputs. Simple workflow: test in Standard, finish in HD. Credit costs Current media generation costs: Seedream 4.5 — 50 Standard, 50 HD GPT Image 1.5 — 43 Standard, 166 HD Flux 2 Flex — 63 Standard, 125 HD Nano Banana 2 — 100 Standard, 150 HD Nano Banana Pro — 188 Standard, 281 HD Choosing a default If you are not sure what to pick: choose GPT Image 1.5 for a safe general default choose Nano Banana 2 for more iteration-friendly creative work choose Nano Banana Pro when quality matters more than cost choose Flux 2 Flex or Seedream 4.5 when you want comparison variety Minimize Token UsageSimple ways to reduce Ampere AI credit usage without technical setup",
+    "sections": [
+      {
+        "heading": "Media Generation",
+        "content": "Choose image generation and image edit defaults Media Generation settings control which visual models Ampere uses for image work. Ampere separates two defaults: Image Generation — create a new image from a prompt Image Edit — edit or improve an existing image This lets you use one model for first drafts and another for refinements."
+      },
+      {
+        "heading": "When to change these settings",
+        "content": "Change media settings if you: create images often want more control over cost and quality want different defaults for creating and editing do repeated visual work and do not want to choose a model each time If you rarely create images, the defaults are fine."
+      },
+      {
+        "heading": "Open Media Generation settings",
+        "content": "Go to the dashboard settings area."
+      },
+      {
+        "heading": "Pick an Image Generation model",
+        "content": "Choose the default model for new images."
+      },
+      {
+        "heading": "Pick an Image Edit model",
+        "content": "Choose the default model for refinements."
+      },
+      {
+        "heading": "Save your choices",
+        "content": "Ampere uses these defaults for future image tasks."
+      },
+      {
+        "heading": "Current media models",
+        "content": "The current product UI includes: GPT Image 1.5 ( gpt-image-1.5 ) Seedream 4.5 ( seedream-4.5 ) Nano Banana Pro ( nano-banana-pro ) Nano Banana 2 ( nano-banana-2 ) Flux 2 Flex ( flux-2-flex )"
+      },
+      {
+        "heading": "Standard vs HD",
+        "content": "Each model shows a Standard and HD credit cost."
+      },
+      {
+        "heading": "Standard",
+        "content": "Lower cost. Best for drafts, prompt testing, and quick variations."
+      },
+      {
+        "heading": "HD",
+        "content": "Higher cost. Best for final images and polished outputs. Simple workflow: test in Standard, finish in HD."
+      },
+      {
+        "heading": "Credit costs",
+        "content": "Current media generation costs: Seedream 4.5 — 50 Standard, 50 HD GPT Image 1.5 — 43 Standard, 166 HD Flux 2 Flex — 63 Standard, 125 HD Nano Banana 2 — 100 Standard, 150 HD Nano Banana Pro — 188 Standard, 281 HD"
+      },
+      {
+        "heading": "Choosing a default",
+        "content": "If you are not sure what to pick: choose GPT Image 1.5 for a safe general default choose Nano Banana 2 for more iteration-friendly creative work choose Nano Banana Pro when quality matters more than cost choose Flux 2 Flex or Seedream 4.5 when you want comparison variety Minimize Token Usage Simple ways to reduce Ampere AI credit usage without technical setup"
+      }
+    ]
+  },
+  {
+    "path": "/docs/advanced/memory-and-context",
+    "url": "https://docs.ampere.sh/docs/advanced/memory-and-context",
+    "title": "Memory & Context",
+    "description": "How OpenClaw remembers useful context and how to improve it",
+    "content": "AdvancedMemory & ContextHow OpenClaw remembers useful context and how to improve itMemory helps your OpenClaw bot stay useful across conversations. A normal chatbot forgets most things after the chat ends. OpenClaw can keep important context in plain Markdown files, so your assistant can remember preferences, decisions, project details, and working notes. Why Memory Matters Good memory makes your assistant better because it can: remember who you are and how you work keep track of project decisions avoid asking the same questions again continue work across sessions follow your preferred style and rules use past context when helping with new tasks Without memory, every conversation starts from zero. How OpenClaw Stores Memory OpenClaw memory is file-based. The most common files are: 🧠MEMORY.mdLong-term memory for durable facts, preferences, and decisions.📝memory/YYYY-MM-DD.mdDaily notes for recent work, raw context, and session history.📋AGENTS.mdOperating rules and instructions for how the assistant should work.✨SOUL.mdTone, personality, boundaries, and response style. These files live in the OpenClaw workspace and can be updated over time. Memory vs Context Memory and context are related, but not the same. Memory is saved information that should last. Context is the information available during the current task. For example, your preferred timezone belongs in memory. A file you uploaded for one task is current context. How to Improve Memory You can improve memory by being clear about what should be saved. Good examples: Remember that I prefer short answers with clear next actions. Remember that Ampere docs should stay simple and customer-facing. Remember this project decision: pricing names should come from the frontend source file. What to Save Save things that will matter again: names and preferences business goals project rules important decisions repo paths and source-of-truth files lessons learned from mistakes recurring workflows Do not save one-time clutter unless it will help later. Keep Memory Clean Useful memory should be short, accurate, and current. A good rule: daily notes can be messy long-term memory should be curated If something changes, update the memory instead of keeping old facts forever. How Ampere Helps Ampere gives you a managed OpenClaw environment where memory, files, skills, channels, and sessions can work together without you managing the full OpenClaw setup yourself. OpenClawThe open-source gateway that powers AmpereMinimize Token UsageSimple ways to reduce Ampere AI credit usage without technical setup",
+    "sections": [
+      {
+        "heading": "Memory & Context",
+        "content": "How OpenClaw remembers useful context and how to improve it Memory helps your OpenClaw bot stay useful across conversations. A normal chatbot forgets most things after the chat ends. OpenClaw can keep important context in plain Markdown files, so your assistant can remember preferences, decisions, project details, and working notes."
+      },
+      {
+        "heading": "Why Memory Matters",
+        "content": "Good memory makes your assistant better because it can: remember who you are and how you work keep track of project decisions avoid asking the same questions again continue work across sessions follow your preferred style and rules use past context when helping with new tasks Without memory, every conversation starts from zero."
+      },
+      {
+        "heading": "How OpenClaw Stores Memory",
+        "content": "OpenClaw memory is file-based. The most common files are:"
+      },
+      {
+        "heading": "MEMORY.md",
+        "content": "Long-term memory for durable facts, preferences, and decisions."
+      },
+      {
+        "heading": "memory/YYYY-MM-DD.md",
+        "content": "Daily notes for recent work, raw context, and session history."
+      },
+      {
+        "heading": "AGENTS.md",
+        "content": "Operating rules and instructions for how the assistant should work."
+      },
+      {
+        "heading": "SOUL.md",
+        "content": "Tone, personality, boundaries, and response style. These files live in the OpenClaw workspace and can be updated over time."
+      },
+      {
+        "heading": "Memory vs Context",
+        "content": "Memory and context are related, but not the same. Memory is saved information that should last. Context is the information available during the current task. For example, your preferred timezone belongs in memory. A file you uploaded for one task is current context."
+      },
+      {
+        "heading": "How to Improve Memory",
+        "content": "You can improve memory by being clear about what should be saved. Good examples: Remember that I prefer short answers with clear next actions. Remember that Ampere docs should stay simple and customer-facing. Remember this project decision: pricing names should come from the frontend source file."
+      },
+      {
+        "heading": "What to Save",
+        "content": "Save things that will matter again: names and preferences business goals project rules important decisions repo paths and source-of-truth files lessons learned from mistakes recurring workflows Do not save one-time clutter unless it will help later."
+      },
+      {
+        "heading": "Keep Memory Clean",
+        "content": "Useful memory should be short, accurate, and current. A good rule: daily notes can be messy long-term memory should be curated If something changes, update the memory instead of keeping old facts forever."
+      },
+      {
+        "heading": "How Ampere Helps",
+        "content": "Ampere gives you a managed OpenClaw environment where memory, files, skills, channels, and sessions can work together without you managing the full OpenClaw setup yourself. OpenClaw The open-source gateway that powers Ampere Minimize Token Usage Simple ways to reduce Ampere AI credit usage without technical setup"
+      }
+    ]
+  },
+  {
+    "path": "/docs/advanced/minimize-token-usage",
+    "url": "https://docs.ampere.sh/docs/advanced/minimize-token-usage",
+    "title": "Minimize Token Usage",
+    "description": "Simple ways to reduce Ampere AI credit usage without technical setup",
+    "content": "AdvancedMinimize Token UsageSimple ways to reduce Ampere AI credit usage without technical setupToken usage is the amount of text your assistant has to read and write. The more text it reads or writes, the more AI credits you may use. This guide is written for non-technical Ampere users. You do not need to understand models, APIs, or billing internals to use it. The Simple Rule Ampere spends more credits when your assistant has to: read long chats read big files read repeated instructions read large tool results write very long answers use a powerful model for a simple task To reduce usage, give the assistant less noise and ask for shorter, clearer answers. 🎯Be specificAsk for exactly what you need instead of asking the assistant to inspect everything.✂️Keep answers shortTell Ampere the answer length you want: 5 bullets, 10 lines, or one page.🧹Send less clutterShare only the relevant file, message, screenshot, or log section.💡Use the right modelUse cheaper models for simple work and stronger models only for hard work. How Ampere Usage Works Ampere credits are easier to understand than raw AI provider billing: $1 = 1,000 Ampere credits. For normal chat, credits mainly depend on two things: What the assistant reads — your message, previous chat context, files, memory, tool results, and instructions What the assistant writes — the final answer, plan, code, summary, or report Different models have different prices. A powerful model costs more than a smaller model, so model choice matters. BYOK noteIf you use BYOK, your AI provider charges your own key directly. BYOK requests do not use managed Ampere credits. Best Prompts to Save Credits Use these patterns when you want lower usage. Ask for a short answer Give me the answer in 5 bullets. Do not repeat the background. Give me only the next action and the reason. Keep this under 150 words. Ask for a focused answer Only check the pricing section and tell me what is wrong. Look at this error and suggest the most likely fix. Do not review the whole project. Compare only these two options and recommend one. Ask for a summary before continuing Summarize this long conversation into decisions, current status, and next steps. Then continue from the summary. This is useful when a task has gone on for many messages. Ask for changes only Tell me only what changed since the last version. Show only the edited text, not the full document. Give me the final copy only. What Not To Do Avoid these habits if you want to save credits. Choosing the Right Model Use a cheaper or balanced model for: short summaries formatting rewriting simple text extracting key points simple customer replies small brainstorms Use a stronger model for: coding debugging legal or security-sensitive review architecture decisions complex research final business-critical copy A good workflow is: Start with a cheaper model for simple exploration. Use a stronger model when the task becomes difficult. Ask for a short summary before switching models. Sharing Files Without Wasting Credits When working with files, send the smallest useful part. Better: Check the introduction and pricing section only. Better: The bug is in the checkout flow. Inspect only the checkout files first. Better: Here are the 30 lines around the error. Avoid: Read the whole repo and find issues. Here is a full 10,000-line log. I pasted the full document again so you remember it. Keeping Long Projects Cheap Long projects can become expensive because every turn may bring old context forward. Use this process: Start with a short goal. Share only the relevant context. Ask for a small plan. Work one step at a time. After a few steps, ask for a compact summary. Continue from the summary, not the full messy chat. Useful prompt: Before continuing, compress this task into: goal, decisions, files, blockers, and next action. Keep only what is needed. Using Memory the Right Way Memory helps save repeated explanation. Good things to remember: your preferred answer style your company/product context stable project rules naming preferences repeated workflows important decisions Examples: Remember: for Ampere docs, keep writing simple and customer-facing. Remember: when I ask for research, give practical business takeaways first. Do not save temporary clutter. Memory should stay clean. For Teams If your team uses Ampere, agree on simple rules: default to short answers ask for summaries during long threads do not paste full logs unless needed save repeated company context in memory or docs use premium models only for premium work ask for “final answer only” when you do not need reasoning This keeps usage lower and makes answers easier to read. Quick Checklist Before sending a message, ask yourself: Can I ask this in fewer words? Can I give only the relevant file section? Do I need a long answer, or just the next step? Is this simple enough for a cheaper model? Have I repeated instructions that should be saved once? Is this long chat ready for a summary? Examples Expensive prompt Read everything from our old chat, all these logs, the full document, and give a detailed explanation of every possible issue. Better prompt Check only the checkout error below. Give me the top 2 likely causes and the next action. Expensive prompt Rewrite this whole page and explain every change. Better prompt Rewrite this page for non-technical customers. Return only the final copy. Expensive prompt Use the strongest model and deeply analyze this simple caption. Better prompt Make this caption clearer in 3 options. Keep each under 12 words. What We Learned From Research We reviewed current AI provider docs plus Reddit and X discussions about high AI-agent costs. The same advice appeared repeatedly: the biggest waste is usually too much unnecessary context long tool outputs and full logs can drain usage quickly smaller models should handle simple tasks stronger models should be saved for hard decisions long conversations should be summarized before continuing focused workflows beat “read everything” workflows shorter answers often improve both cost and clarity The practical takeaway for Ampere users is simple: give the assistant the right context, not all context.Memory & ContextHow OpenClaw remembers useful context and how to improve itMedia GenerationChoose image generation and image edit defaults",
+    "sections": [
+      {
+        "heading": "Minimize Token Usage",
+        "content": "Simple ways to reduce Ampere AI credit usage without technical setup Token usage is the amount of text your assistant has to read and write. The more text it reads or writes, the more AI credits you may use. This guide is written for non-technical Ampere users. You do not need to understand models, APIs, or billing internals to use it."
+      },
+      {
+        "heading": "The Simple Rule",
+        "content": "Ampere spends more credits when your assistant has to: read long chats read big files read repeated instructions read large tool results write very long answers use a powerful model for a simple task To reduce usage, give the assistant less noise and ask for shorter, clearer answers."
+      },
+      {
+        "heading": "Be specific",
+        "content": "Ask for exactly what you need instead of asking the assistant to inspect everything."
+      },
+      {
+        "heading": "Keep answers short",
+        "content": "Tell Ampere the answer length you want: 5 bullets, 10 lines, or one page."
+      },
+      {
+        "heading": "Send less clutter",
+        "content": "Share only the relevant file, message, screenshot, or log section."
+      },
+      {
+        "heading": "Use the right model",
+        "content": "Use cheaper models for simple work and stronger models only for hard work."
+      },
+      {
+        "heading": "How Ampere Usage Works",
+        "content": "Ampere credits are easier to understand than raw AI provider billing: $1 = 1,000 Ampere credits. For normal chat, credits mainly depend on two things: What the assistant reads — your message, previous chat context, files, memory, tool results, and instructions What the assistant writes — the final answer, plan, code, summary, or report Different models have different prices. A powerful model costs more than a smaller model, so model choice matters. BYOK note If you use BYOK, your AI provider charges your own key directly. BYOK requests do not use managed Ampere credits."
+      },
+      {
+        "heading": "Best Prompts to Save Credits",
+        "content": "Use these patterns when you want lower usage."
+      },
+      {
+        "heading": "Ask for a short answer",
+        "content": "Give me the answer in 5 bullets. Do not repeat the background. Give me only the next action and the reason. Keep this under 150 words."
+      },
+      {
+        "heading": "Ask for a focused answer",
+        "content": "Only check the pricing section and tell me what is wrong. Look at this error and suggest the most likely fix. Do not review the whole project. Compare only these two options and recommend one."
+      },
+      {
+        "heading": "Ask for a summary before continuing",
+        "content": "Summarize this long conversation into decisions, current status, and next steps. Then continue from the summary. This is useful when a task has gone on for many messages."
+      },
+      {
+        "heading": "Ask for changes only",
+        "content": "Tell me only what changed since the last version. Show only the edited text, not the full document. Give me the final copy only."
+      },
+      {
+        "heading": "What Not To Do",
+        "content": "Avoid these habits if you want to save credits."
+      },
+      {
+        "heading": "Choosing the Right Model",
+        "content": "Use a cheaper or balanced model for: short summaries formatting rewriting simple text extracting key points simple customer replies small brainstorms Use a stronger model for: coding debugging legal or security-sensitive review architecture decisions complex research final business-critical copy A good workflow is: Start with a cheaper model for simple exploration. Use a stronger model when the task becomes difficult. Ask for a short summary before switching models."
+      },
+      {
+        "heading": "Sharing Files Without Wasting Credits",
+        "content": "When working with files, send the smallest useful part. Better: Check the introduction and pricing section only. Better: The bug is in the checkout flow. Inspect only the checkout files first. Better: Here are the 30 lines around the error. Avoid: Read the whole repo and find issues. Here is a full 10,000-line log. I pasted the full document again so you remember it."
+      },
+      {
+        "heading": "Keeping Long Projects Cheap",
+        "content": "Long projects can become expensive because every turn may bring old context forward. Use this process: Start with a short goal. Share only the relevant context. Ask for a small plan. Work one step at a time. After a few steps, ask for a compact summary. Continue from the summary, not the full messy chat. Useful prompt: Before continuing, compress this task into: goal, decisions, files, blockers, and next action. Keep only what is needed."
+      },
+      {
+        "heading": "Using Memory the Right Way",
+        "content": "Memory helps save repeated explanation. Good things to remember: your preferred answer style your company/product context stable project rules naming preferences repeated workflows important decisions Examples: Remember: for Ampere docs, keep writing simple and customer-facing. Remember: when I ask for research, give practical business takeaways first. Do not save temporary clutter. Memory should stay clean."
+      },
+      {
+        "heading": "For Teams",
+        "content": "If your team uses Ampere, agree on simple rules: default to short answers ask for summaries during long threads do not paste full logs unless needed save repeated company context in memory or docs use premium models only for premium work ask for “final answer only” when you do not need reasoning This keeps usage lower and makes answers easier to read."
+      },
+      {
+        "heading": "Quick Checklist",
+        "content": "Before sending a message, ask yourself: Can I ask this in fewer words? Can I give only the relevant file section? Do I need a long answer, or just the next step? Is this simple enough for a cheaper model? Have I repeated instructions that should be saved once? Is this long chat ready for a summary?"
+      },
+      {
+        "heading": "Expensive prompt",
+        "content": "Read everything from our old chat, all these logs, the full document, and give a detailed explanation of every possible issue."
+      },
+      {
+        "heading": "Better prompt",
+        "content": "Check only the checkout error below. Give me the top 2 likely causes and the next action."
+      },
+      {
+        "heading": "Expensive prompt",
+        "content": "Rewrite this whole page and explain every change."
+      },
+      {
+        "heading": "Better prompt",
+        "content": "Rewrite this page for non-technical customers. Return only the final copy."
+      },
+      {
+        "heading": "Expensive prompt",
+        "content": "Use the strongest model and deeply analyze this simple caption."
+      },
+      {
+        "heading": "Better prompt",
+        "content": "Make this caption clearer in 3 options. Keep each under 12 words."
+      },
+      {
+        "heading": "What We Learned From Research",
+        "content": "We reviewed current AI provider docs plus Reddit and X discussions about high AI-agent costs. The same advice appeared repeatedly: the biggest waste is usually too much unnecessary context long tool outputs and full logs can drain usage quickly smaller models should handle simple tasks stronger models should be saved for hard decisions long conversations should be summarized before continuing focused workflows beat “read everything” workflows shorter answers often improve both cost and clarity The practical takeaway for Ampere users is simple: give the assistant the right context, not all context. Memory & Context How OpenClaw remembers useful context and how to improve it Media Generation Choose image generation and image edit defaults"
+      }
+    ]
+  },
+  {
+    "path": "/docs/advanced/openclaw",
+    "url": "https://docs.ampere.sh/docs/advanced/openclaw",
+    "title": "OpenClaw",
+    "description": "The open-source gateway that powers Ampere",
+    "content": "AdvancedOpenClawThe open-source gateway that powers AmpereOpenClaw is an open-source, self-hosted gateway for AI agents. It connects chat apps like Telegram, Discord, Slack, Signal, WhatsApp, and more to an always-available AI assistant. OpenClaw is powerful, but it can be hard to set up and manage yourself. Ampere gives you an easier and more secure managed way to run OpenClaw. What OpenClaw Does OpenClaw can help power: chat from multiple apps and channels persistent assistant sessions tool use and file work installable skills scheduled tasks and background work workspace-based memory and instructions local or server-hosted assistant workflows Important Workspace Files OpenClaw uses simple Markdown files in the workspace to shape how the assistant behaves. 📋AGENTS.mdOperating rules for the assistant, including how it should work, remember context, and handle tasks.✨SOUL.mdThe assistant's voice, tone, style, opinions, and boundaries.🛠️TOOLS.mdLocal notes about tools, setup, commands, and environment-specific conventions.💓HEARTBEAT.mdOptional checklist for proactive periodic check-ins and background attention.🪪IDENTITY.mdThe assistant's name, vibe, and identity details. These files make OpenClaw feel more personal than a normal chatbot, because the assistant can keep durable instructions and memory in plain files. Learn More OpenClaw is open source on GitHub: https://github.com/openclaw/openclawBrowser AutomationUse the Ampere Desktop app for advanced web interactionMemory & ContextHow OpenClaw remembers useful context and how to improve it",
+    "sections": [
+      {
+        "heading": "OpenClaw",
+        "content": "The open-source gateway that powers Ampere OpenClaw is an open-source, self-hosted gateway for AI agents. It connects chat apps like Telegram, Discord, Slack, Signal, WhatsApp, and more to an always-available AI assistant. OpenClaw is powerful, but it can be hard to set up and manage yourself. Ampere gives you an easier and more secure managed way to run OpenClaw."
+      },
+      {
+        "heading": "What OpenClaw Does",
+        "content": "OpenClaw can help power: chat from multiple apps and channels persistent assistant sessions tool use and file work installable skills scheduled tasks and background work workspace-based memory and instructions local or server-hosted assistant workflows"
+      },
+      {
+        "heading": "Important Workspace Files",
+        "content": "OpenClaw uses simple Markdown files in the workspace to shape how the assistant behaves."
+      },
+      {
+        "heading": "AGENTS.md",
+        "content": "Operating rules for the assistant, including how it should work, remember context, and handle tasks."
+      },
+      {
+        "heading": "SOUL.md",
+        "content": "The assistant's voice, tone, style, opinions, and boundaries."
+      },
+      {
+        "heading": "TOOLS.md",
+        "content": "Local notes about tools, setup, commands, and environment-specific conventions."
+      },
+      {
+        "heading": "HEARTBEAT.md",
+        "content": "Optional checklist for proactive periodic check-ins and background attention."
+      },
+      {
+        "heading": "IDENTITY.md",
+        "content": "The assistant's name, vibe, and identity details. These files make OpenClaw feel more personal than a normal chatbot, because the assistant can keep durable instructions and memory in plain files."
+      },
+      {
+        "heading": "Learn More",
+        "content": "OpenClaw is open source on GitHub: https://github.com/openclaw/openclaw Browser Automation Use the Ampere Desktop app for advanced web interaction Memory & Context How OpenClaw remembers useful context and how to improve it"
+      }
+    ]
+  },
+  {
+    "path": "/docs/automation/browser-automation",
+    "url": "https://docs.ampere.sh/docs/automation/browser-automation",
+    "title": "Browser Automation",
+    "description": "Use the Ampere Desktop app for advanced web interaction",
+    "content": "AutomationBrowser AutomationUse the Ampere Desktop app for advanced web interactionBrowser Automation is an advanced Ampere feature for website interaction. It is different from web search. Web search finds information. Browser automation can work through website flows when a normal search is not enough. What it is for Use Browser Automation for tasks like: opening websites checking what is on a page moving through web flows collecting information from pages that need interaction running workflows that benefit from your desktop network path Do not use it for simple questions that normal chat or web search can answer. What you need Before using it, know these limits: it depends on the Ampere Desktop app the desktop app must be running during browser tasks the feature is marked Alpha in the product plan eligibility can matter setup may take time because Ampere installs required support How to enable it Open Browser AutomationGo to the feature area in the dashboard.Enable the featureIf your plan supports it, start the enable flow.Wait for installAmpere may show an installing state while setup completes.Download the desktop appUse the dashboard download flow if prompted.Keep the app runningBrowser tasks need the desktop app active during use. Desktop app availability The current product download flow shows: macOS available Linux available Windows coming soon Check the dashboard for the latest state. Why the Desktop App Matters Browser Automation runs through the Ampere Desktop app so your bot can interact with websites more like a real browser session. The desktop app helps with: using your own computer and network path keeping browser sessions available during tasks supporting websites that need normal browser behavior handling flows that are harder from a server-only environment Keep the desktop app open when you want Browser Automation to work. Best first test After setup, try one simple browser task before a complex workflow. Example: “Open this page and tell me the main heading and pricing options you see.” This helps separate setup problems from task complexity. Scheduled Jobs & AutomationsCreate recurring assistant work in AmpereOpenClawThe open-source gateway that powers Ampere",
+    "sections": [
+      {
+        "heading": "Browser Automation",
+        "content": "Use the Ampere Desktop app for advanced web interaction Browser Automation is an advanced Ampere feature for website interaction. It is different from web search. Web search finds information. Browser automation can work through website flows when a normal search is not enough."
+      },
+      {
+        "heading": "What it is for",
+        "content": "Use Browser Automation for tasks like: opening websites checking what is on a page moving through web flows collecting information from pages that need interaction running workflows that benefit from your desktop network path Do not use it for simple questions that normal chat or web search can answer."
+      },
+      {
+        "heading": "What you need",
+        "content": "Before using it, know these limits: it depends on the Ampere Desktop app the desktop app must be running during browser tasks the feature is marked Alpha in the product plan eligibility can matter setup may take time because Ampere installs required support"
+      },
+      {
+        "heading": "Open Browser Automation",
+        "content": "Go to the feature area in the dashboard."
+      },
+      {
+        "heading": "Enable the feature",
+        "content": "If your plan supports it, start the enable flow."
+      },
+      {
+        "heading": "Wait for install",
+        "content": "Ampere may show an installing state while setup completes."
+      },
+      {
+        "heading": "Download the desktop app",
+        "content": "Use the dashboard download flow if prompted."
+      },
+      {
+        "heading": "Keep the app running",
+        "content": "Browser tasks need the desktop app active during use."
+      },
+      {
+        "heading": "Desktop app availability",
+        "content": "The current product download flow shows: macOS available Linux available Windows coming soon Check the dashboard for the latest state."
+      },
+      {
+        "heading": "Why the Desktop App Matters",
+        "content": "Browser Automation runs through the Ampere Desktop app so your bot can interact with websites more like a real browser session. The desktop app helps with: using your own computer and network path keeping browser sessions available during tasks supporting websites that need normal browser behavior handling flows that are harder from a server-only environment Keep the desktop app open when you want Browser Automation to work."
+      },
+      {
+        "heading": "Best first test",
+        "content": "After setup, try one simple browser task before a complex workflow. Example: “Open this page and tell me the main heading and pricing options you see.” This helps separate setup problems from task complexity. Scheduled Jobs & Automations Create recurring assistant work in Ampere OpenClaw The open-source gateway that powers Ampere"
+      }
+    ]
+  },
+  {
+    "path": "/docs/automation/scheduled-jobs",
+    "url": "https://docs.ampere.sh/docs/automation/scheduled-jobs",
+    "title": "Scheduled Jobs & Automations",
+    "description": "Create recurring assistant work in Ampere",
+    "content": "AutomationScheduled Jobs & AutomationsCreate recurring assistant work in AmpereScheduled Jobs let your OpenClaw bot run work later or on a repeating schedule. Use them for reminders, reports, check-ins, and other tasks you do not want to repeat manually. What Scheduled Jobs are Scheduled Jobs are recurring assistant tasks. They are good for work that should happen: later every day every week every few hours on a clear timetable ⏰Scheduled JobsRecurring assistant tasks.🔍Web SearchFinding information.🌐Browser AutomationInteracting with websites. Separate advanced feature. Good jobs to create Good examples: “Remind me every weekday at 7:30 AM to review my priorities.” “Send me a morning briefing every day at 8 AM.” “Every Friday, prepare a weekly summary of what I finished.” “Check this site regularly and alert me if it goes down.” “Every evening, remind me to close out open tasks.” If the task sounds like “do this every day/week/hour,” it is probably a good Scheduled Job. Best creation flow Describe the job in chatAsk the bot to create the recurring task in plain language.Review it in the dashboardOpen Scheduled Jobs and check that the job exists.Use Run NowTest the job immediately before trusting it long term.Leave it enabledIf the result is good, let it keep running. What you can do from the Scheduled Jobs page The dashboard lets you: see existing jobs check whether a job is enabled pause or resume jobs run a job immediately start from templates like Morning Briefing, Bill Reminder, Price Drop Alert, and Server Down Alert Why Run Now matters Use Run Now to test important jobs. It helps you confirm: the prompt is clear the output is useful the job still works the timing is not the only problem Timezone and credits Timezone matters. If your timezone is wrong, a valid job can run at the wrong local time. Credits and plan state can also matter because Scheduled Jobs are real assistant runs, not simple timer popups. SkillsAdd reusable workflows to your OpenClaw botBrowser AutomationUse the Ampere Desktop app for advanced web interaction",
+    "sections": [
+      {
+        "heading": "Scheduled Jobs & Automations",
+        "content": "Create recurring assistant work in Ampere Scheduled Jobs let your OpenClaw bot run work later or on a repeating schedule. Use them for reminders, reports, check-ins, and other tasks you do not want to repeat manually."
+      },
+      {
+        "heading": "What Scheduled Jobs are",
+        "content": "Scheduled Jobs are recurring assistant tasks. They are good for work that should happen: later every day every week every few hours on a clear timetable"
+      },
+      {
+        "heading": "Scheduled Jobs",
+        "content": "Recurring assistant tasks."
+      },
+      {
+        "heading": "Web Search",
+        "content": "Finding information."
+      },
+      {
+        "heading": "Browser Automation",
+        "content": "Interacting with websites. Separate advanced feature."
+      },
+      {
+        "heading": "Good jobs to create",
+        "content": "Good examples: “Remind me every weekday at 7:30 AM to review my priorities.” “Send me a morning briefing every day at 8 AM.” “Every Friday, prepare a weekly summary of what I finished.” “Check this site regularly and alert me if it goes down.” “Every evening, remind me to close out open tasks.” If the task sounds like “do this every day/week/hour,” it is probably a good Scheduled Job."
+      },
+      {
+        "heading": "Describe the job in chat",
+        "content": "Ask the bot to create the recurring task in plain language."
+      },
+      {
+        "heading": "Review it in the dashboard",
+        "content": "Open Scheduled Jobs and check that the job exists."
+      },
+      {
+        "heading": "Use Run Now",
+        "content": "Test the job immediately before trusting it long term."
+      },
+      {
+        "heading": "Leave it enabled",
+        "content": "If the result is good, let it keep running."
+      },
+      {
+        "heading": "What you can do from the Scheduled Jobs page",
+        "content": "The dashboard lets you: see existing jobs check whether a job is enabled pause or resume jobs run a job immediately start from templates like Morning Briefing, Bill Reminder, Price Drop Alert, and Server Down Alert"
+      },
+      {
+        "heading": "Why Run Now matters",
+        "content": "Use Run Now to test important jobs. It helps you confirm: the prompt is clear the output is useful the job still works the timing is not the only problem"
+      },
+      {
+        "heading": "Timezone and credits",
+        "content": "Timezone matters. If your timezone is wrong, a valid job can run at the wrong local time. Credits and plan state can also matter because Scheduled Jobs are real assistant runs, not simple timer popups. Skills Add reusable workflows to your OpenClaw bot Browser Automation Use the Ampere Desktop app for advanced web interaction"
+      }
+    ]
+  },
+  {
+    "path": "/docs/core-features/channels",
+    "url": "https://docs.ampere.sh/docs/core-features/channels",
+    "title": "Channels",
+    "description": "Connect your OpenClaw bot to Telegram, Discord, WhatsApp, and more",
+    "content": "Core FeaturesChannelsConnect your OpenClaw bot to Telegram, Discord, WhatsApp, and moreChannels let you use the same hosted OpenClaw bot outside the dashboard. The dashboard stays your main control center. Channels are extra ways to reach the same assistant from apps you already use. Channels shown in Ampere The current dashboard shows these configurable channels: TelegramUses a bot token from @BotFather.DiscordUses a Discord bot token.WhatsAppUses WhatsApp credentials and a QR-based flow.LINEShown with its own setup dialog. The dashboard also lists more channels as coming soon, including Slack, Signal, iMessage, Google Chat, Microsoft Teams, Mattermost, Matrix, IRC, Feishu / Lark, Twitch, Nextcloud Talk, Nostr, Zalo, and WebChat. Telegram Telegram is usually the easiest first channel. You need: a Telegram bot token from @BotFather Basic flow: create a bot with @BotFather copy the token paste it into Channels > Telegram verify and save test the bot in a private DM first See the Telegram guide for groups, topics, privacy mode, and pairing. Discord Discord is useful for server and team workflows. You need: a Discord bot token Message Content Intent enabled in the Discord Developer Portal A valid Discord token can still fail if Message Content Intent is not enabled. WhatsApp WhatsApp uses a more specific setup flow. You may need: Phone number ID Access token QR-based connection steps in the dashboard Partial credentials are not enough. Follow the dashboard prompts closely. LINE LINE is listed in the current dashboard with its own setup dialog. Use the fields shown in the dashboard as the source of truth. Troubleshooting When a channel does not work, check in this order: dashboard channel status token or credential value required provider settings, such as Discord Message Content Intent whether the channel save completed whether the gateway had time to restart Chat & InterfacesUse your OpenClaw bot from the dashboard and connected channelsTelegramUse your OpenClaw assistant from Telegram DMs, groups, and forum topics",
+    "sections": [
+      {
+        "heading": "Channels",
+        "content": "Connect your OpenClaw bot to Telegram, Discord, WhatsApp, and more Channels let you use the same hosted OpenClaw bot outside the dashboard. The dashboard stays your main control center. Channels are extra ways to reach the same assistant from apps you already use."
+      },
+      {
+        "heading": "Channels shown in Ampere",
+        "content": "The current dashboard shows these configurable channels:"
+      },
+      {
+        "heading": "Telegram",
+        "content": "Uses a bot token from @BotFather."
+      },
+      {
+        "heading": "Discord",
+        "content": "Uses a Discord bot token."
+      },
+      {
+        "heading": "WhatsApp",
+        "content": "Uses WhatsApp credentials and a QR-based flow."
+      },
+      {
+        "heading": "LINE",
+        "content": "Shown with its own setup dialog. The dashboard also lists more channels as coming soon, including Slack, Signal, iMessage, Google Chat, Microsoft Teams, Mattermost, Matrix, IRC, Feishu / Lark, Twitch, Nextcloud Talk, Nostr, Zalo, and WebChat."
+      },
+      {
+        "heading": "Telegram",
+        "content": "Telegram is usually the easiest first channel. You need: a Telegram bot token from @BotFather Basic flow: create a bot with @BotFather copy the token paste it into Channels > Telegram verify and save test the bot in a private DM first See the Telegram guide for groups, topics, privacy mode, and pairing."
+      },
+      {
+        "heading": "Discord",
+        "content": "Discord is useful for server and team workflows. You need: a Discord bot token Message Content Intent enabled in the Discord Developer Portal A valid Discord token can still fail if Message Content Intent is not enabled."
+      },
+      {
+        "heading": "WhatsApp",
+        "content": "WhatsApp uses a more specific setup flow. You may need: Phone number ID Access token QR-based connection steps in the dashboard Partial credentials are not enough. Follow the dashboard prompts closely."
+      },
+      {
+        "heading": "LINE",
+        "content": "LINE is listed in the current dashboard with its own setup dialog. Use the fields shown in the dashboard as the source of truth."
+      },
+      {
+        "heading": "Troubleshooting",
+        "content": "When a channel does not work, check in this order: dashboard channel status token or credential value required provider settings, such as Discord Message Content Intent whether the channel save completed whether the gateway had time to restart Chat & Interfaces Use your OpenClaw bot from the dashboard and connected channels Telegram Use your OpenClaw assistant from Telegram DMs, groups, and forum topics"
+      }
+    ]
+  },
+  {
+    "path": "/docs/core-features/chat-and-interfaces",
+    "url": "https://docs.ampere.sh/docs/core-features/chat-and-interfaces",
+    "title": "Chat & Interfaces",
+    "description": "Use your OpenClaw bot from the dashboard and connected channels",
+    "content": "Core FeaturesChat & InterfacesUse your OpenClaw bot from the dashboard and connected channelsAmpere gives you one hosted OpenClaw bot that you can use from different places. Use the dashboard first. Add channels after the assistant behaves the way you want. Main places to chat 💻Dashboard ChatBest for setup, files, history, models, and full control.💬Connected ChannelsUse Telegram, Discord, WhatsApp, and more for quick access.🕰️Saved SessionsContinue older work without mixing topics.🎙️Voice-to-TextSpeak a message and send it as text. What dashboard chat is best for Use dashboard chat when you need to: send your first real message upload files or screenshots review saved sessions choose a model see tool activity test the assistant before connecting channels Files and images Use attachments when the assistant needs the real file, screenshot, document, or image. Good examples: “Summarize this document.” “Review this screenshot and tell me what is wrong.” “Explain this code file.” “Turn this rough note into a clean message.” Saved sessions Ampere saves conversations so you can return to them later. Simple rule: use the same session for the same topic start a new chat for a new topic Starting a new chat does not delete old sessions. Channels are access points Telegram, Discord, WhatsApp, and the dashboard are not separate bots. They are different ways to reach the same hosted OpenClaw bot. That means the dashboard should stay your main control surface, while channels are for fast daily access. Best first use Do not start with only “hi.” Give the assistant context. Good first prompts: “Ask me 5 questions so you can understand how to help me.” “Help me set up your role as my assistant.” “Create a simple assistant profile for me.” “Explain what you can do in Ampere and help me choose my first task.” Credits & PricingUnderstand Ampere credits, plans, BYOK, and top-upsChannelsConnect your OpenClaw bot to Telegram, Discord, WhatsApp, and more",
+    "sections": [
+      {
+        "heading": "Chat & Interfaces",
+        "content": "Use your OpenClaw bot from the dashboard and connected channels Ampere gives you one hosted OpenClaw bot that you can use from different places. Use the dashboard first. Add channels after the assistant behaves the way you want."
+      },
+      {
+        "heading": "Dashboard Chat",
+        "content": "Best for setup, files, history, models, and full control."
+      },
+      {
+        "heading": "Connected Channels",
+        "content": "Use Telegram, Discord, WhatsApp, and more for quick access."
+      },
+      {
+        "heading": "Saved Sessions",
+        "content": "Continue older work without mixing topics."
+      },
+      {
+        "heading": "Voice-to-Text",
+        "content": "Speak a message and send it as text."
+      },
+      {
+        "heading": "What dashboard chat is best for",
+        "content": "Use dashboard chat when you need to: send your first real message upload files or screenshots review saved sessions choose a model see tool activity test the assistant before connecting channels"
+      },
+      {
+        "heading": "Files and images",
+        "content": "Use attachments when the assistant needs the real file, screenshot, document, or image. Good examples: “Summarize this document.” “Review this screenshot and tell me what is wrong.” “Explain this code file.” “Turn this rough note into a clean message.”"
+      },
+      {
+        "heading": "Saved sessions",
+        "content": "Ampere saves conversations so you can return to them later. Simple rule: use the same session for the same topic start a new chat for a new topic Starting a new chat does not delete old sessions."
+      },
+      {
+        "heading": "Channels are access points",
+        "content": "Telegram, Discord, WhatsApp, and the dashboard are not separate bots. They are different ways to reach the same hosted OpenClaw bot. That means the dashboard should stay your main control surface, while channels are for fast daily access."
+      },
+      {
+        "heading": "Best first use",
+        "content": "Do not start with only “hi.” Give the assistant context. Good first prompts: “Ask me 5 questions so you can understand how to help me.” “Help me set up your role as my assistant.” “Create a simple assistant profile for me.” “Explain what you can do in Ampere and help me choose my first task.” Credits & Pricing Understand Ampere credits, plans, BYOK, and top-ups Channels Connect your OpenClaw bot to Telegram, Discord, WhatsApp, and more"
+      }
+    ]
+  },
+  {
+    "path": "/docs/core-features/skills",
+    "url": "https://docs.ampere.sh/docs/core-features/skills",
+    "title": "Skills",
+    "description": "Add reusable workflows to your OpenClaw bot",
+    "content": "Core FeaturesSkillsAdd reusable workflows to your OpenClaw botSkills are reusable workflows for your OpenClaw bot. A skill teaches your bot how to do a specific type of work, such as research, code review, scraping, reporting, support, or media generation. Use a skill when you want the same workflow to work well again and again without writing a long prompt every time. What a Skill Can Include A skill can contain: instructions for the assistant workflow steps reference files templates tool guidance code or scripts when needed Think of a skill like a reusable playbook. It tells your bot how to handle one job properly. Why Use Skills? 🔁Repeatable workTurn a task you do often into a reusable workflow.🎯Better resultsGive the bot clear steps instead of relying on a one-line prompt.🛠️Tool-specific helpTeach the bot how to use a tool, API, website, or file format correctly.📈Business processesBuild workflows for reports, research, support, content, operations, and more. Where to Find Skills Open Dashboard > Skills. From there, you can: browse available skills search skills view installed skills open skill details install free skills purchase paid skills when available create or submit custom skills How to Use a Skill Find a skillOpen the Skills page and search for the workflow you need.Check the detailsRead what the skill does, what setup it needs, and whether it is free or paid.Install itInstall the skill and complete any required setup, such as API keys or credentials.Use it in chatOpen dashboard chat and ask your bot to use the skill for a real task. Example prompts: Use the GitHub skill to review this pull request. Use the research skill to compare these three tools and give me a short recommendation. Use the report skill to turn these notes into a weekly update. Installed skills may also appear in the chat composer when skill mentions are available. Good First Skills Start with skills that solve real repeated work. Good examples: GitHub review workflow web research workflow customer support response workflow weekly report workflow browser automation workflow data cleanup workflow Avoid installing many skills at once. Install one useful skill, test it, then add more. Free, Paid, and Owned Skills Ampere supports different skill states: Free — install and use when available Paid — purchase before use If a skill needs external services, it may ask for setup before it can work. When Setup Is Required Some skills need extra values, such as: API keys environment variables service credentials account IDs project settings This is normal. A skill that connects to another service needs permission and configuration before it can help. Custom Skills If the marketplace does not have the workflow you need, you can create a custom skill. Custom skills are useful for: your company process your reporting format your research method your support style your internal tools your preferred templates A good custom skill should be clear and narrow. “Create weekly client reports” is better than “help with marketing.” Common Questions TelegramUse your OpenClaw assistant from Telegram DMs, groups, and forum topicsScheduled Jobs & AutomationsCreate recurring assistant work in Ampere",
+    "sections": [
+      {
+        "heading": "Skills",
+        "content": "Add reusable workflows to your OpenClaw bot Skills are reusable workflows for your OpenClaw bot. A skill teaches your bot how to do a specific type of work, such as research, code review, scraping, reporting, support, or media generation. Use a skill when you want the same workflow to work well again and again without writing a long prompt every time."
+      },
+      {
+        "heading": "What a Skill Can Include",
+        "content": "A skill can contain: instructions for the assistant workflow steps reference files templates tool guidance code or scripts when needed Think of a skill like a reusable playbook. It tells your bot how to handle one job properly."
+      },
+      {
+        "heading": "Repeatable work",
+        "content": "Turn a task you do often into a reusable workflow."
+      },
+      {
+        "heading": "Better results",
+        "content": "Give the bot clear steps instead of relying on a one-line prompt."
+      },
+      {
+        "heading": "Tool-specific help",
+        "content": "Teach the bot how to use a tool, API, website, or file format correctly."
+      },
+      {
+        "heading": "Business processes",
+        "content": "Build workflows for reports, research, support, content, operations, and more."
+      },
+      {
+        "heading": "Where to Find Skills",
+        "content": "Open Dashboard > Skills . From there, you can: browse available skills search skills view installed skills open skill details install free skills purchase paid skills when available create or submit custom skills"
+      },
+      {
+        "heading": "Find a skill",
+        "content": "Open the Skills page and search for the workflow you need."
+      },
+      {
+        "heading": "Check the details",
+        "content": "Read what the skill does, what setup it needs, and whether it is free or paid."
+      },
+      {
+        "heading": "Install it",
+        "content": "Install the skill and complete any required setup, such as API keys or credentials."
+      },
+      {
+        "heading": "Use it in chat",
+        "content": "Open dashboard chat and ask your bot to use the skill for a real task. Example prompts: Use the GitHub skill to review this pull request. Use the research skill to compare these three tools and give me a short recommendation. Use the report skill to turn these notes into a weekly update. Installed skills may also appear in the chat composer when skill mentions are available."
+      },
+      {
+        "heading": "Good First Skills",
+        "content": "Start with skills that solve real repeated work. Good examples: GitHub review workflow web research workflow customer support response workflow weekly report workflow browser automation workflow data cleanup workflow Avoid installing many skills at once. Install one useful skill, test it, then add more."
+      },
+      {
+        "heading": "Free, Paid, and Owned Skills",
+        "content": "Ampere supports different skill states: Free — install and use when available Paid — purchase before use If a skill needs external services, it may ask for setup before it can work."
+      },
+      {
+        "heading": "When Setup Is Required",
+        "content": "Some skills need extra values, such as: API keys environment variables service credentials account IDs project settings This is normal. A skill that connects to another service needs permission and configuration before it can help."
+      },
+      {
+        "heading": "Custom Skills",
+        "content": "If the marketplace does not have the workflow you need, you can create a custom skill. Custom skills are useful for: your company process your reporting format your research method your support style your internal tools your preferred templates A good custom skill should be clear and narrow. “Create weekly client reports” is better than “help with marketing.”"
+      },
+      {
+        "heading": "Common Questions",
+        "content": "Telegram Use your OpenClaw assistant from Telegram DMs, groups, and forum topics Scheduled Jobs & Automations Create recurring assistant work in Ampere"
+      }
+    ]
+  },
+  {
+    "path": "/docs/core-features/telegram",
+    "url": "https://docs.ampere.sh/docs/core-features/telegram",
+    "title": "Telegram",
+    "description": "Use your OpenClaw assistant from Telegram DMs, groups, and forum topics",
+    "content": "Core FeaturesTelegramUse your OpenClaw assistant from Telegram DMs, groups, and forum topicsTelegram is one of the most useful channels for OpenClaw because it works on phone, desktop, and browser. In Ampere, Telegram is an access point for the same hosted OpenClaw bot you use in the dashboard. It is not a separate assistant. Quick setup Create a bot with BotFatherOpen Telegram, search for @BotFather, and send /newbot.Copy the tokenBotFather gives you a token. Treat it like a password.Connect in AmpereOpen Dashboard > Channels > Telegram, paste the token, verify it, and save.Test in private DMOpen your Telegram bot and send /start or a simple real message.Approve pairing if neededIf your OpenClaw bot asks for pairing approval, complete that flow.Add groups laterOnly add the bot to groups after private DM works. Where Telegram fits 📱Private DMBest for personal assistant use, quick tasks, files, and reminders.👥GroupBest when a team or project room needs to call the assistant in.🧵Forum topicBest for separate work lanes inside one Telegram group. Private DMs Use DMs for: personal questions reminders summaries quick follow-ups file forwarding testing the bot before group use OpenClaw often uses pairing or allowlists for DMs. This protects your assistant from unknown people who find the bot. Groups Groups are useful for shared work, but they need cleaner rules. In most groups, the bot should respond only when: mentioned replied to explicitly allowed by group settings This keeps the bot helpful without interrupting every conversation. Forum topics Telegram forum topics are separate lanes inside one group. They are useful for: research ops alerts planning files code review recurring job output Topics help keep one group from becoming one messy assistant thread. Files, images, and voice notes Telegram can send useful context to your OpenClaw bot: screenshots PDFs and documents CSV or text files voice notes photos forwarded messages links For larger file work, use the Workspace. Telegram is best for fast capture and quick review. BotFather settings worth checking After creating the bot, you can improve the Telegram experience with: /setdescription /setabouttext /setuserpic /setcommands /setjoingroups /setprivacy For most Ampere users, only the token is required. These settings just make the bot easier to understand and manage. Protect your tokenDo not paste your Telegram bot token into public chats, screenshots, or support threads. If it leaks, rotate it in BotFather and update Ampere. Privacy mode and groups Telegram bots do not always see every group message. This depends on Telegram privacy mode, admin status, and your OpenClaw/Ampere configuration. Use this rule: keep privacy mode on for normal mention-based group behavior disable privacy mode or make the bot an admin only when the bot truly needs to see more messages Troubleshooting Check these first: token copied correctly from BotFather channel verified and saved in Ampere gateway had time to restart private DM works before group testing pairing or allowlist is approved group privacy mode matches the behavior you expect forum topic is the right one if using topics ChannelsConnect your OpenClaw bot to Telegram, Discord, WhatsApp, and moreSkillsAdd reusable workflows to your OpenClaw bot",
+    "sections": [
+      {
+        "heading": "Telegram",
+        "content": "Use your OpenClaw assistant from Telegram DMs, groups, and forum topics Telegram is one of the most useful channels for OpenClaw because it works on phone, desktop, and browser. In Ampere, Telegram is an access point for the same hosted OpenClaw bot you use in the dashboard. It is not a separate assistant."
+      },
+      {
+        "heading": "Create a bot with BotFather",
+        "content": "Open Telegram, search for @BotFather , and send /newbot ."
+      },
+      {
+        "heading": "Copy the token",
+        "content": "BotFather gives you a token. Treat it like a password."
+      },
+      {
+        "heading": "Connect in Ampere",
+        "content": "Open Dashboard > Channels > Telegram , paste the token, verify it, and save."
+      },
+      {
+        "heading": "Test in private DM",
+        "content": "Open your Telegram bot and send /start or a simple real message."
+      },
+      {
+        "heading": "Approve pairing if needed",
+        "content": "If your OpenClaw bot asks for pairing approval, complete that flow."
+      },
+      {
+        "heading": "Add groups later",
+        "content": "Only add the bot to groups after private DM works."
+      },
+      {
+        "heading": "Private DM",
+        "content": "Best for personal assistant use, quick tasks, files, and reminders."
+      },
+      {
+        "heading": "Group",
+        "content": "Best when a team or project room needs to call the assistant in."
+      },
+      {
+        "heading": "Forum topic",
+        "content": "Best for separate work lanes inside one Telegram group."
+      },
+      {
+        "heading": "Private DMs",
+        "content": "Use DMs for: personal questions reminders summaries quick follow-ups file forwarding testing the bot before group use OpenClaw often uses pairing or allowlists for DMs. This protects your assistant from unknown people who find the bot."
+      },
+      {
+        "heading": "Groups",
+        "content": "Groups are useful for shared work, but they need cleaner rules. In most groups, the bot should respond only when: mentioned replied to explicitly allowed by group settings This keeps the bot helpful without interrupting every conversation."
+      },
+      {
+        "heading": "Forum topics",
+        "content": "Telegram forum topics are separate lanes inside one group. They are useful for: research ops alerts planning files code review recurring job output Topics help keep one group from becoming one messy assistant thread."
+      },
+      {
+        "heading": "Files, images, and voice notes",
+        "content": "Telegram can send useful context to your OpenClaw bot: screenshots PDFs and documents CSV or text files voice notes photos forwarded messages links For larger file work, use the Workspace . Telegram is best for fast capture and quick review."
+      },
+      {
+        "heading": "BotFather settings worth checking",
+        "content": "After creating the bot, you can improve the Telegram experience with: /setdescription /setabouttext /setuserpic /setcommands /setjoingroups /setprivacy For most Ampere users, only the token is required. These settings just make the bot easier to understand and manage. Protect your token Do not paste your Telegram bot token into public chats, screenshots, or support threads. If it leaks, rotate it in BotFather and update Ampere."
+      },
+      {
+        "heading": "Privacy mode and groups",
+        "content": "Telegram bots do not always see every group message. This depends on Telegram privacy mode, admin status, and your OpenClaw/Ampere configuration. Use this rule: keep privacy mode on for normal mention-based group behavior disable privacy mode or make the bot an admin only when the bot truly needs to see more messages"
+      },
+      {
+        "heading": "Troubleshooting",
+        "content": "Check these first: token copied correctly from BotFather channel verified and saved in Ampere gateway had time to restart private DM works before group testing pairing or allowlist is approved group privacy mode matches the behavior you expect forum topic is the right one if using topics Channels Connect your OpenClaw bot to Telegram, Discord, WhatsApp, and more Skills Add reusable workflows to your OpenClaw bot"
+      }
+    ]
+  },
+  {
+    "path": "/docs/credits-and-pricing",
+    "url": "https://docs.ampere.sh/docs/credits-and-pricing",
+    "title": "Credits & Pricing",
+    "description": "Understand Ampere credits, plans, BYOK, and top-ups",
+    "content": "Credits & PricingUnderstand Ampere credits, plans, BYOK, and top-upsAmpere uses credits for managed AI usage. The core rule is simple: $1 = 1,000 Ampere credits. Credits are used for chat models and media generation. Different models cost different amounts because provider prices are different. How credits work 💬Chat modelsCharged from input and output token usage.🖼️Media modelsCharged as a fixed cost per image request. If you use BYOK, model usage goes through your own provider key. BYOK requests do not use Ampere credits. Managed AI plans Current managed plans from the Ampere frontend config: Free — $0/mo, 5,000 credits, 2 vCPU, 2GB RAM, 20GB storage Pro — $39/mo, 20,000 credits, 4 vCPU, 8GB RAM, 40GB storage Ultra — $79/mo, 40,000 credits, 8 vCPU, 16GB RAM, 80GB storage Unlimited — $299/mo, 40,000 credits plus unlimited Claude model credits, 12 vCPU, 24GB RAM, 120GB storage Business — $499/mo, custom credits, 16 vCPU, 32GB RAM, 200GB storage Plan features can include hosting, web search, cloud backup, auto update, BYOK support, auto top-up, browser automation, and priority support depending on the plan. BYOK plans BYOK means “bring your own key.” Ampere hosts OpenClaw, but model billing goes through your provider account. Current BYOK plan options in the frontend config: BYOK Starter — $9.99/mo, 4 vCPU, 4GB RAM, 40GB storage BYOK Pro — $19.99/mo, 6 vCPU, 8GB RAM, 80GB storage BYOK Ultra — $39.99/mo, 8 vCPU, 16GB RAM, 120GB storage BYOK Max — $59.99/mo, 12 vCPU, 24GB RAM, 200GB storage BYOK Enterprise — $89.99/mo, 16 vCPU, 30GB RAM, 300GB storage Team plans Team plans are priced per seat and support shared usage. Managed team plans: Team Pro — $39/seat, 20,000 credits, 4 vCPU, 8GB RAM, 40GB storage Team Ultra — $79/seat, 40,000 credits, 8 vCPU, 16GB RAM, 80GB storage Team Unlimited — $299/seat, 40,000 credits plus unlimited Claude model credits, 12 vCPU, 24GB RAM, 120GB storage Team BYOK plans use the same BYOK tiers as individual BYOK plans. Media generation credits Media models use fixed credit costs per request: Seedream 4.5 — 50 standard, 50 HD GPT Image 1.5 — 43 standard, 166 HD Flux 2 Flex — 63 standard, 125 HD Nano Banana 2 — 100 standard, 150 HD Nano Banana Pro — 188 standard, 281 HD Simple media tipUse Standard while testing ideas. Use HD when you need a polished final result. Choosing a model Use cheaper models for simple tasks and premium models for important work. For everyday chat, use a budget or balanced model. For coding, analysis, or careful writing, use a stronger model. For image work, test in Standard before spending HD credits. If you are unsure, use Ampere Auto and review the result. Common questions Getting StartedStart using Ampere well after your OpenClaw bot is readyChat & InterfacesUse your OpenClaw bot from the dashboard and connected channels",
+    "sections": [
+      {
+        "heading": "Credits & Pricing",
+        "content": "Understand Ampere credits, plans, BYOK, and top-ups Ampere uses credits for managed AI usage. The core rule is simple: $1 = 1,000 Ampere credits. Credits are used for chat models and media generation. Different models cost different amounts because provider prices are different."
+      },
+      {
+        "heading": "Chat models",
+        "content": "Charged from input and output token usage."
+      },
+      {
+        "heading": "Media models",
+        "content": "Charged as a fixed cost per image request. If you use BYOK , model usage goes through your own provider key. BYOK requests do not use Ampere credits."
+      },
+      {
+        "heading": "Managed AI plans",
+        "content": "Current managed plans from the Ampere frontend config: Free — $0/mo, 5,000 credits, 2 vCPU, 2GB RAM, 20GB storage Pro — $39/mo, 20,000 credits, 4 vCPU, 8GB RAM, 40GB storage Ultra — $79/mo, 40,000 credits, 8 vCPU, 16GB RAM, 80GB storage Unlimited — $299/mo, 40,000 credits plus unlimited Claude model credits, 12 vCPU, 24GB RAM, 120GB storage Business — $499/mo, custom credits, 16 vCPU, 32GB RAM, 200GB storage Plan features can include hosting, web search, cloud backup, auto update, BYOK support, auto top-up, browser automation, and priority support depending on the plan."
+      },
+      {
+        "heading": "BYOK plans",
+        "content": "BYOK means “bring your own key.” Ampere hosts OpenClaw, but model billing goes through your provider account. Current BYOK plan options in the frontend config: BYOK Starter — $9.99/mo, 4 vCPU, 4GB RAM, 40GB storage BYOK Pro — $19.99/mo, 6 vCPU, 8GB RAM, 80GB storage BYOK Ultra — $39.99/mo, 8 vCPU, 16GB RAM, 120GB storage BYOK Max — $59.99/mo, 12 vCPU, 24GB RAM, 200GB storage BYOK Enterprise — $89.99/mo, 16 vCPU, 30GB RAM, 300GB storage"
+      },
+      {
+        "heading": "Team plans",
+        "content": "Team plans are priced per seat and support shared usage. Managed team plans: Team Pro — $39/seat, 20,000 credits, 4 vCPU, 8GB RAM, 40GB storage Team Ultra — $79/seat, 40,000 credits, 8 vCPU, 16GB RAM, 80GB storage Team Unlimited — $299/seat, 40,000 credits plus unlimited Claude model credits, 12 vCPU, 24GB RAM, 120GB storage Team BYOK plans use the same BYOK tiers as individual BYOK plans."
+      },
+      {
+        "heading": "Media generation credits",
+        "content": "Media models use fixed credit costs per request: Seedream 4.5 — 50 standard, 50 HD GPT Image 1.5 — 43 standard, 166 HD Flux 2 Flex — 63 standard, 125 HD Nano Banana 2 — 100 standard, 150 HD Nano Banana Pro — 188 standard, 281 HD Simple media tip Use Standard while testing ideas. Use HD when you need a polished final result."
+      },
+      {
+        "heading": "Choosing a model",
+        "content": "Use cheaper models for simple tasks and premium models for important work. For everyday chat, use a budget or balanced model. For coding, analysis, or careful writing, use a stronger model. For image work, test in Standard before spending HD credits. If you are unsure, use Ampere Auto and review the result."
+      },
+      {
+        "heading": "Common questions",
+        "content": "Getting Started Start using Ampere well after your OpenClaw bot is ready Chat & Interfaces Use your OpenClaw bot from the dashboard and connected channels"
+      }
+    ]
+  },
+  {
+    "path": "/docs/getting-started",
+    "url": "https://docs.ampere.sh/docs/getting-started",
+    "title": "Getting Started",
+    "description": "Start using Ampere well after your OpenClaw bot is ready",
+    "content": "Getting StartedStart using Ampere well after your OpenClaw bot is readyThis guide helps you start using Ampere in a useful way. OpenClaw is powerful, but self-hosting it means dealing with Node versions, install commands, provider keys, gateway setup, channel config, daemon/service setup, health checks, and config validation. Ampere handles that hard setup so you can start from the dashboard. What Ampere Handles for You If you self-host OpenClaw, the official setup includes steps like: installing OpenClaw on your machine checking Node.js compatibility choosing a model provider and adding API keys running CLI onboarding configuring the Gateway checking gateway status and ports setting up channels like Telegram or WhatsApp managing config files and validation errors keeping the service running With Ampere, you do not need to start there. Your job is to use the assistant well: give it context, set useful automation, pick the right models, and improve memory over time. Start with a Good First Prompt Your first message should give the assistant direction. Good first prompts: “Ask me 5 questions so you can understand how to help me.” “Help me set up your role as my assistant.” “Create a simple assistant profile for me.” “Explain what you can do in Ampere and help me pick my first useful task.” Avoid starting with only “hi.” Ampere works best when your OpenClaw bot has real context. Teach It How You Work After the first prompt, tell the assistant things that should matter again. Examples: Remember that I prefer short answers with clear next actions. Remember that my current focus is customer support and product growth. When I ask for research, give me a short recommendation first, then details. This improves memory and makes future conversations faster. Check Heartbeat Heartbeat is how your assistant can check in or notice important things on a schedule. Use it for: personal productivity check-ins daily reminders lightweight follow-ups “tell me if something needs attention” workflows Keep heartbeat instructions simple. If you make them too broad, the assistant may interrupt too often. Set Up Useful Cron Jobs Cron jobs are for recurring work. Good first cron jobs: daily planning prompt weekly report summary morning task review website or analytics check reminder to follow up with leads Start with one recurring job. Test it. Then add more. Use Budget-Friendly Models Not every task needs the most expensive model. Use cheaper or faster models for: simple summaries rewriting text extraction classification quick chat basic research drafts Use premium models when the task needs stronger reasoning, code quality, long context, or careful judgment. See Credits & Pricing for model costs. Save Credits and Cash Simple ways to spend less: use shorter prompts when the task is simple attach only the files the assistant needs use budget-friendly models for routine work avoid asking the same long question many times create reusable skills for repeated workflows use BYOK if you prefer paying model providers directly keep cron jobs focused so they do not run unnecessary work disable features you are not using, such as extra cron jobs, broad heartbeat checks, or heavy tools, so they do not waste tokens in the background Good setup means your assistant is useful without wasting credits. Add Features Slowly After dashboard chat feels useful, add more features one by one. Connect channelsUse your assistant from Telegram, Discord, WhatsApp, and more.Install skillsAdd repeatable workflows to your assistant.Create jobsRun reminders, reports, and recurring tasks.Improve memoryHelp your assistant remember useful preferences, decisions, and context. Common Questions IntroductionWhat Ampere is and when to use itCredits & PricingUnderstand Ampere credits, plans, BYOK, and top-ups",
+    "sections": [
+      {
+        "heading": "Getting Started",
+        "content": "Start using Ampere well after your OpenClaw bot is ready This guide helps you start using Ampere in a useful way. OpenClaw is powerful, but self-hosting it means dealing with Node versions, install commands, provider keys, gateway setup, channel config, daemon/service setup, health checks, and config validation. Ampere handles that hard setup so you can start from the dashboard."
+      },
+      {
+        "heading": "What Ampere Handles for You",
+        "content": "If you self-host OpenClaw, the official setup includes steps like: installing OpenClaw on your machine checking Node.js compatibility choosing a model provider and adding API keys running CLI onboarding configuring the Gateway checking gateway status and ports setting up channels like Telegram or WhatsApp managing config files and validation errors keeping the service running With Ampere, you do not need to start there. Your job is to use the assistant well: give it context, set useful automation, pick the right models, and improve memory over time."
+      },
+      {
+        "heading": "Start with a Good First Prompt",
+        "content": "Your first message should give the assistant direction. Good first prompts: “Ask me 5 questions so you can understand how to help me.” “Help me set up your role as my assistant.” “Create a simple assistant profile for me.” “Explain what you can do in Ampere and help me pick my first useful task.” Avoid starting with only “hi.” Ampere works best when your OpenClaw bot has real context."
+      },
+      {
+        "heading": "Teach It How You Work",
+        "content": "After the first prompt, tell the assistant things that should matter again. Examples: Remember that I prefer short answers with clear next actions. Remember that my current focus is customer support and product growth. When I ask for research, give me a short recommendation first, then details. This improves memory and makes future conversations faster."
+      },
+      {
+        "heading": "Check Heartbeat",
+        "content": "Heartbeat is how your assistant can check in or notice important things on a schedule. Use it for: personal productivity check-ins daily reminders lightweight follow-ups “tell me if something needs attention” workflows Keep heartbeat instructions simple. If you make them too broad, the assistant may interrupt too often."
+      },
+      {
+        "heading": "Set Up Useful Cron Jobs",
+        "content": "Cron jobs are for recurring work. Good first cron jobs: daily planning prompt weekly report summary morning task review website or analytics check reminder to follow up with leads Start with one recurring job. Test it. Then add more."
+      },
+      {
+        "heading": "Use Budget-Friendly Models",
+        "content": "Not every task needs the most expensive model. Use cheaper or faster models for: simple summaries rewriting text extraction classification quick chat basic research drafts Use premium models when the task needs stronger reasoning, code quality, long context, or careful judgment. See Credits & Pricing for model costs."
+      },
+      {
+        "heading": "Save Credits and Cash",
+        "content": "Simple ways to spend less: use shorter prompts when the task is simple attach only the files the assistant needs use budget-friendly models for routine work avoid asking the same long question many times create reusable skills for repeated workflows use BYOK if you prefer paying model providers directly keep cron jobs focused so they do not run unnecessary work disable features you are not using, such as extra cron jobs, broad heartbeat checks, or heavy tools, so they do not waste tokens in the background Good setup means your assistant is useful without wasting credits."
+      },
+      {
+        "heading": "Add Features Slowly",
+        "content": "After dashboard chat feels useful, add more features one by one."
+      },
+      {
+        "heading": "Connect channels",
+        "content": "Use your assistant from Telegram, Discord, WhatsApp, and more."
+      },
+      {
+        "heading": "Install skills",
+        "content": "Add repeatable workflows to your assistant."
+      },
+      {
+        "heading": "Create jobs",
+        "content": "Run reminders, reports, and recurring tasks."
+      },
+      {
+        "heading": "Improve memory",
+        "content": "Help your assistant remember useful preferences, decisions, and context."
+      },
+      {
+        "heading": "Common Questions",
+        "content": "Introduction What Ampere is and when to use it Credits & Pricing Understand Ampere credits, plans, BYOK, and top-ups"
+      }
+    ]
+  }
+]

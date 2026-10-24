@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ampere AI Support Agent | Live Console</title>
+  <meta name="description" content="AI customer support agent with RAG docs search, account diagnostics, and human escalation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar: Context & Inspector -->
+    <aside class="sidebar">
+      <div class="sidebar-sticky-header">
+        <div class="brand">
+          <div class="brand-logo">🦞</div>
+          <div>
+            <h2>Ampere Support</h2>
+            <span class="badge live-badge">AI Agent Active</span>
+          </div>
+        </div>
+
+        <div class="sidebar-top-actions">
+          <button id="btn-new-conv" class="btn-new-chat">
+            <span class="plus-icon">＋</span>
+            <span>New Chat</span>
+          </button>
+          <div class="active-conv-indicator">
+            <span class="active-label">Active:</span>
+            <input type="text" id="conv-id-input" value="conv-demo-101" spellcheck="false" title="Active Conversation ID" />
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section" id="recent-convs-section">
+        <div class="section-header-row">
+          <h3>Recent Conversations</h3>
+          <div style="display: flex; gap: 6px; align-items: center;">
+            <button id="btn-clear-all-convs" class="icon-btn" title="Delete all recent conversations">🗑</button>
+            <button id="btn-refresh-convs" class="icon-btn" title="Refresh history">↺</button>
+          </div>
+        </div>
+        <div id="conv-history-list" class="conv-history-list">
+          <p class="history-empty">No past conversations yet.</p>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <details class="sidebar-accordion" id="presets-accordion">
+          <summary class="accordion-summary">
+            <span>⚡ Quick Prompt Presets</span>
+            <span class="chevron">▾</span>
+          </summary>
+          <div class="presets-list">
+            <button class="preset-btn" data-prompt="How do I add an agent?">
+              <span class="preset-tag">Docs RAG</span>
+              How do I add an agent?
+            </button>
+            <button class="preset-btn" data-prompt="My agent is broken.">
+              <span class="preset-tag">Diagnose</span>
+              My agent is broken.
+            </button>
+            <button class="preset-btn" data-prompt="rahul@example.com">
+              <span class="preset-tag">Email Lookup</span>
+              rahul@example.com
+            </button>
+            <button class="preset-btn" data-prompt="priya@example.com">
+              <span class="preset-tag">Healthy Bot</span>
+              priya@example.com
+            </button>
+            <button class="preset-btn" data-prompt="I need a human.">
+              <span class="preset-tag">Escalate</span>
+              I need a human.
+            </button>
+            <button class="preset-btn" data-prompt="How do I bake a chocolate cake?">
+              <span class="preset-tag">Unknown Fallback</span>
+              How do I bake a chocolate cake?
+            </button>
+          </div>
+        </details>
+
+        <details class="sidebar-accordion" id="accounts-accordion">
+          <summary class="accordion-summary">
+            <span>📋 Seed Accounts</span>
+            <span class="chevron">▾</span>
+          </summary>
+          <div id="accounts-container" class="accounts-list">
+            <div class="account-item">
+              <span class="acc-email">priya@example.com</span>
+              <span class="status-pill status-running">running</span>
+            </div>
+            <div class="account-item">
+              <span class="acc-email">rahul@example.com</span>
+              <span class="status-pill status-offline">offline</span>
+            </div>
+            <div class="account-item">
+              <span class="acc-email">any other email</span>
+              <span class="status-pill status-not_found">not_found</span>
+            </div>
+          </div>
+        </details>
+
+        <details class="sidebar-accordion" id="simulation-accordion">
+          <summary class="accordion-summary">
+            <span>⚙️ Fault Simulation</span>
+            <span class="chevron">▾</span>
+          </summary>
+          <div class="toggle-control">
+            <label class="switch">
+              <input type="checkbox" id="toggle-failure" />
+              <span class="slider round"></span>
+            </label>
+            <span id="failure-label" class="toggle-text">Simulate Webhook Fail</span>
+          </div>
+        </details>
+      </div>
+    </aside>
+
+    <!-- Main Chat Workspace -->
+    <main class="chat-main">
+      <header class="chat-header">
+        <div class="header-status">
+          <div class="indicator-dot"></div>
+          <div>
+            <h1 class="header-title">Ampere AI Customer Support</h1>
+            <p class="header-subtitle">Official docs search • Diagnostics • Discord Escalation</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <span id="current-outcome-badge" class="outcome-badge-header outcome-idle">Ready</span>
+          <button id="btn-clear-chat" class="secondary-btn">Clear View</button>
+        </div>
+      </header>
+
+      <!-- Message History List -->
+      <section id="chat-messages" class="chat-history">
+        <div class="bot-welcome">
+          <div class="bot-avatar">🤖</div>
+          <div class="welcome-content">
+            <h4>Welcome to Ampere Support!</h4>
+            <p>I can help answer questions from our official documentation, inspect your assistant status in real time, or connect you with human support engineers.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chat Input Area -->
+      <footer class="chat-footer">
+        <form id="chat-form" class="chat-input-wrapper">
+          <textarea
+            id="user-input"
+            rows="1"
+            placeholder="Type your question or issue (e.g. 'How do I add an agent?', 'My agent is broken')..."
+            required
+          ></textarea>
+          <button type="submit" id="btn-send" class="btn-primary" aria-label="Send message">
+            <span>Send</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+        </form>
+      </footer>
+    </main>
+
+    <!-- Right Drawer: Live Payload Inspector -->
+    <aside class="inspector-panel">
+      <div class="inspector-header">
+        <h3>🔍 Response Inspector</h3>
+        <span class="tag-json">JSON</span>
+      </div>
+      <div class="inspector-content">
+        <div class="inspector-field">
+          <span class="field-title">Latest Outcome</span>
+          <div id="inspector-outcome" class="field-value empty">—</div>
+        </div>
+        <div class="inspector-field">
+          <span class="field-title">Active Ticket ID</span>
+          <div id="inspector-ticket" class="field-value empty">—</div>
+        </div>
+        <div class="inspector-field">
+          <span class="field-title">Cited Documentation Links</span>
+          <div id="inspector-links" class="field-value empty">—</div>
+        </div>
+        <div class="inspector-field full-height">
+          <span class="field-title">Raw API Contract Payload</span>
+          <pre id="inspector-json" class="raw-json">// Awaiting first request</pre>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js?v=4"></script>
+</body>
+</html>
